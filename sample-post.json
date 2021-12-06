@@ -1,0 +1,41 @@
+{
+  "id": "<snip>",
+  "name": "<snip>",
+  "etag": "<snip>",
+  "type": "Microsoft.SecurityInsights/Incidents",
+  "properties": {
+    "title": "Custom Alert Rule",
+    "description": "Custom incident rule",
+    "severity": "Medium",
+    "status": "New",
+    "owner": {
+      "objectId": "",
+      "email": "",
+      "assignedTo": "",
+      "userPrincipalName": ""
+    },
+    "labels": [],
+    "firstActivityTimeUtc": "2021-05-13T09:41:08.844Z",
+    "lastActivityTimeUtc": "2021-05-13T09:41:08.844Z",
+    "lastModifiedTimeUtc": "2021-05-13T10:30:23.0752524Z",
+    "createdTimeUtc": "2021-05-13T10:30:23.0615255Z",
+    "incidentNumber": 113,
+    "additionalData": {
+      "alertsCount": 1,
+      "bookmarksCount": 0,
+      "commentsCount": 0,
+      "alertProductNames": [
+        "Azure Sentinel"
+      ],
+      "tactics": [
+        "Persistence"
+      ]
+    },
+    "relatedAnalyticRuleIds": [
+      "<snip>"
+    ],
+    "incidentUrl": "<snip>",
+    "providerName": "Azure Sentinel",
+    "providerIncidentId": "113"
+  }
+}

@@ -6,9 +6,9 @@
       "direction": "in",
       "name": "req",
       "methods": [
-        "get"
+        "post"
       ],
-      "route": "products/{id:int}"
+      "route": "sentinel"
     },
     {
       "type": "http",

@@ -5,6 +5,7 @@ import (
 	"os"
 	"strconv"
 
+	"az-function/sentinelalert"
 	"github.com/gin-gonic/gin"
 )
 
@@ -13,6 +14,7 @@ var products map[int]Product = map[int]Product{
 	2: {"Butter"},
 }
 
+// Product definition of input
 type Product struct {
 	Name string
 }
@@ -37,17 +39,19 @@ func getProduct(c *gin.Context) {
 
 }
 
-func get_port() string {
+func getPort() string {
 	port := ":8080"
 	if val, ok := os.LookupEnv("FUNCTIONS_CUSTOMHANDLER_PORT"); ok {
 		port = ":" + val
 	}
 	return port
 }
+
 func main() {
 	r := gin.Default()
 	r.GET("/api/products", getProducts)
 	r.GET("/api/products/:id", getProduct)
-	r.Run(get_port())
+	r.POST("/api/sentinel", sentinelalert.HandleSentinel)
+	r.Run(getPort())
 
 }
