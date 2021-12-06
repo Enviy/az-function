@@ -13,5 +13,6 @@ func HandleSentinel(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
+	// TODO: Impliment call to MongoDB interface.
 	c.JSON(http.StatusOK, gin.H{"status": "body received"})
 }
